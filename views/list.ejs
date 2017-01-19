@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>用户信息</title>
+<link rel="stylesheet" href="/stylesheets/style.css">
+<script src="http://cdn.jsdelivr.net/vue/2.0.0/vue.min.js"></script>
+</head>
+<body>
+
+<header>
+<h1><%= title %></h1>
+</header>
+<table border="1" style="border-collapse: collapse;">
+	<caption>用户信息表</caption>
+	<thead>
+		<tr>
+			<th>序号</th><th>姓名</th><th>性别</th><th>年龄</th><th>邮箱</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% for(var i=0; i<users.length;i++) { %>
+			<tr><td><%=i+1 %></td><td><%=users[i].name %></td><td><%=users[i].sex %></td><td><%=users[i].age %></td><td><%=users[i].email %></td></tr>
+	   <% } %>
+	</tbody>
+	
+</table>
+<br/><br/><br/>
+<div id="app">
+			<h1>{{message}}</h1>
+			<input type="text" v-model="message" />
+		</div>
+ <script type="text/javascript">
+ 	new Vue({      //放在index.js里渲染失败
+ 		el:'#app',
+ 		data:{
+ 			message:'hello vue'
+ 		}
+ 	})
+ </script>
+</body>
+</html>

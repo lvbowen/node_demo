@@ -1,0 +1,6 @@
+启动项目(blog目录下)：
+ 	supervisor app.js
+启动数据库（mongodb里的bin目录下）:
+	mongod --dbpath F:/nodeproject/blog/  (公司)    G:/mongodb/bin
+	mongod --dbpath E:/nodejs/blog/      （家里）
+		
